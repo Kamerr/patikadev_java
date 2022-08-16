@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class taksiMetre {
+    public static void main(String[] args) {
+
+                int km;
+                double kmb=2.5, toplam, basUcret =10;
+
+                Scanner input= new Scanner(System.in);
+                System.out.print("Mesafeyi KM cinsinden giriniz : ");
+                km = input.nextInt();
+
+                toplam = (km * kmb);
+                toplam += basUcret;
+
+                toplam= (toplam< 20.0) ? 20 : toplam;
+                System.out.println("Toplam tutar: " + toplam);
+
+            }
+    }
+
