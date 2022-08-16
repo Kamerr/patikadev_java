@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Odevkosullu {
+
+            public static void main(String[] args){
+            Scanner input= new Scanner(System.in);
+
+            String userName,password;
+
+            System.out.print("Kullanici adini giriniz: ");
+            userName=input.nextLine();
+
+            System.out.print("Sifrenizi giriniz: ");
+            password=input.nextLine();
+
+            if(userName.equals("Kamer")&& password.equals("123java")){
+                System.out.println("Giris yaptiniz! ");
+            }
+            else if(userName.equals("Kamer")&& !password.equals("123java")){
+                System.out.println("Sifrenizi sifirlamak ister misiniz? (yes/no)");
+                String x=input.nextLine();
+                if(x.equals("yes")){
+                    System.out.print("Yeni sifrenizi giriniz: ");
+                    String newPassword=input.nextLine();
+                    if(newPassword==password){
+                        System.out.print("Sifre olusturulamadı, lutfen baska sifre giriniz.");
+                    }
+                    else{
+                        System.out.print("Sifre olusturuldu!");
+                    }
+                }
+                else{
+                    System.out.println("Iyi gunler dileriz!");
+                }
+            }
+            else{
+                System.out.println("Bilgileriniz yanlis. ");
+            }
+        }
+    }
+
