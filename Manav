@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Manav {
+    public static void main(String[] args) {
+        double armutfiyat=2.14,armutkilo,
+                elmafiyat=3.67,elmakilo,
+                domatesfiyat=1.11,domateskilo,
+                muzfiyat=0.95,muzkilo,
+                patlicanfiyat=5.0,patlicankilo;
+        Scanner input=new Scanner(System.in);
+
+        System.out.println("ne kadar armut aldınız");
+        armutkilo=input.nextDouble();
+
+        System.out.println("ne kadar elma aldınız");
+        elmakilo=input.nextDouble();
+
+        System.out.println("ne kadar domates aldınız");
+        domateskilo=input.nextDouble();
+
+        System.out.println("ne kadar muz aldınız");
+        muzkilo=input.nextDouble();
+
+        System.out.println("ne kadar patlican aldınız");
+        patlicankilo=input.nextDouble();
+
+        double hesap=(armutkilo*armutfiyat)+(elmakilo*elmafiyat)+(domateskilo*domatesfiyat)+(muzkilo*muzfiyat)+(patlicankilo*patlicanfiyat);
+
+        System.out.println("toplam borcunuz  :"+hesap);
+    }
+}
