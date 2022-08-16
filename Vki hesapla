@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Vki {
+    public static void main(String[] args) {
+
+        double boy,kilo;
+        Scanner input=new Scanner(System.in);
+
+        System.out.println("boyunuzu metre cinsinden giriniz");
+        boy=input.nextDouble();
+
+        System.out.println("kilonuzu giriniz");
+        kilo=input.nextDouble();
+
+
+        double hesapla=kilo/(boy*boy);
+        System.out.println("vücut kitle indeksi   :"+hesapla);
+    }
+}
