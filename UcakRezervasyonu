@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class UcakRezervasyonu{
+    public static void main(String[] args) {
+        double km, yas, tekYon, gidisDonus, kmBasinaUcret = 0.10, ucustipi,toplamfiyat,
+                indirimsizfiyat,yasindirim=0,gdindirim=0;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Mesafeyi km cinsinden giriniz : ");
+        km = input.nextDouble();
+        System.out.print("Kaç yaşındasınız :");
+        yas = input.nextDouble();
+        System.out.println("Yolculuk tipini seçiniz");
+        System.out.print("Tek yön bilet:1 \nGidiş-Dönüş :2");
+        ucustipi = input.nextDouble();
+        indirimsizfiyat= km * kmBasinaUcret;
+        boolean isPrime = true;
+
+        if (ucustipi < 3 && ucustipi > 0&& yas>0) {
+            if(yas<12){
+                yasindirim=(indirimsizfiyat/2);
+                System.out.println("\nAge discount : "+yasindirim);
+            }else if (yas>=12&&yas<=24)
+            { yasindirim=((indirimsizfiyat*10)/100)        ;
+                System.out.println("\nYaş indirim : "+ yasindirim);
+            } else if (yas>65) {yasindirim= (indirimsizfiyat*30)/100;
+                System.out.println("\nYaş indirim : "+ yasindirim);
+            }if (ucustipi==2){gdindirim=(indirimsizfiyat*20)/100;
+                System.out.println("Gidiş dönüş indirim : "+ gdindirim);
+            }
+            System.out.println("İndirimsiz Fiyat : " + indirimsizfiyat);
+
+            toplamfiyat=(indirimsizfiyat-yasindirim-gdindirim);
+            System.out.println("Taplam Fiyat : "+ toplamfiyat);
+        } else {
+
+            System.out.println("You entered faulty input. ");
+
+        }
+
+
+    }
+}
