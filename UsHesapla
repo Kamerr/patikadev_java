@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class UsHesapla {
+    public static void main(String[] args) {
+        int us,taban,hesapla=1;
+        Scanner input=new Scanner(System.in);
+        System.out.print("taban sayısı giriniz");
+        taban=input.nextInt();
+        System.out.print("üs sayısı giriniz");
+        us=input.nextInt();
+        for(int i=0;i<us;i++)
+        {
+            hesapla*=taban;
+                    }
+        System.out.print(taban+"üzeri"+us+"sonuç   :"+hesapla);
+
+    }
+}
