@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Nenbuyuk {
+    public static void main(String[] args) {
+        int say, enbuyuk = 0, enkucuk = 0, tut;
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("kaç tane negatif sayi girilsin");
+        say = input.nextInt();
+
+        for (int i = 0; i < say; i++) {
+            System.out.println(i+". sayı giriniz");
+            tut = input.nextInt();
+            if (tut > enbuyuk)
+                enbuyuk = tut;
+            else if (tut < enkucuk)
+                enkucuk = tut;
+
+        }
+        System.out.println("En buyuk"+enbuyuk+"en küçük"+enkucuk);
+    }
+
+}
+
