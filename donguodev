@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class donguodev {
+    public static void main(String[] args) {
+        int toplam=0,adet=0;
+        Scanner input=new Scanner(System.in);
+        System.out.println("sayi giriniz");
+        int sayi = input.nextInt();
+
+        for(int i=1;i<sayi;i++)
+        {
+            if(i%3==0 && sayi%4==0)
+            {
+                toplam+=i;
+                adet++;
+
+            }
+        }
+        int ortalama=toplam/(adet-1);
+        System.out.println("sonuç  :"+ortalama+"adet  :"+adet);
+           
+    }
+}
