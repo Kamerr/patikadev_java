@@ -1,0 +1,26 @@
+package metod;
+import java.util.Scanner;
+public class recursiveus {
+
+        static int result=1;
+        static int power(int taban, int us)
+        {
+            result *=taban;
+            if(us==0)
+                return 1;
+            else if(us==1)
+                return result;
+
+            return power(taban,us-1);
+        }
+        public static void main(String[] args) {
+            Scanner input = new Scanner(System.in);
+            System.out.println("Taban değeri giriniz : ");
+            int taban = input.nextInt();
+            System.out.println("Üs değeri giriniz : ");
+            int us= input.nextInt();
+
+            System.out.println(taban + " ^ " + us + " = " + power(taban,us));
+        }
+    }
+
